@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vui lòng đăng nhập để biết nhé 😛</title>
+  <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <meta property="og:title" content="gift you">
+  <meta property="og:image" content="gift.jpg">
+</head>
+
+<body>
+
+  <div class="materialContainer">
+    <div class="box">
+      <div class="title">Hãy đăng nhập đi nào 🥴</div>
+      <div class="input">
+        <label for="username">tài khoản 😘😘</label>
+        <input type="text" name="username" id="username">
+        <span class="spin"></span>
+      </div>
+      <div class="input">
+        <label for="password">mật khẩu 💞</label>
+        <input type="password" name="password" id="password">
+        <span class="spin"></span>
+      </div>
+      <div class="button login">
+        <button onclick="login()">
+          <span>Nhập rồi thì ấn dô đây 🔓</span>
+          <i class="fa fa-check"></i>
+        </button>
+      </div>
+      <a href="javascript:" class="pass-forgot" onclick="forgot()">Nếu quên thì ấn dô đây 😤</a>
+    </div>
+
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+  <script>
+    function forgot() {
+      alert("kết bạn và nhắn tin để biết");
+      var linkface = window.open("https://www.facebook.com/tuantvtvip");
+      setTimeout(linkface,150);
+    }
+
+    function login() {
+      var username = document.getElementById("username");
+      var pass = document.getElementById("password");
+      if (username.value == "") {
+        alert("Vui lòng đăng nhập để biết nhé 😛");
+        username.focus();
+        return;
+      } else if (pass.value == "") {
+        alert("Hãy nhớ lại thời gian 😘");
+        return;
+      } else if ((pass.value == "19012007") && (username.value == "Kiều Anh" || "tuân" || "tuantvt" || "trà my" || "tuantvt" || "tvt" || "26/6/2005")) {
+        alert("Xác minh thành công và tặng cậu một lá thư nè 💟");
+        window.location.href = "main.html";
+      } else {
+        alert("Không xác minh được ❌ bạn là ai ❓ ❓ ❓ ");
+        window.location.href = "Error_tim.html";
+        return;
+      }
+      return true;
+    }
+  </script>
+
+</body>
+
+</html>
